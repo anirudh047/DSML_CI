@@ -25,6 +25,6 @@ def test_predict(client):
                 "LoanAmount": 500000
                 }
     
-    resp = client.post("/predict",josn=test_json)
+    resp = client.post("/predict",json=test_json)
     assert resp.status_code == 200
-    assert resp.josn == {"loan_approval_status: ": "Rejected"}
+    assert resp.json == {"loan_approval_status: ": "Rejected"}
